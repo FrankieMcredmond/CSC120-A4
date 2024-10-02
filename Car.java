@@ -34,8 +34,21 @@ public class Car {
         if (manifest.size()==0){
             System.out.println("sorry Car is empty");}
         else{
-            for (int i = 0; i < max_capacity; i++){
+            for (int i = 0; i < getCapacity(); i++){
             System.out.println(manifest.get(i));}}}
 
-    
+     public static void main(String[] args) {
+        Car myCar= new Car(10);
+        Passenger Sarah= new Passenger("sarah");
+        Passenger Ryan= new Passenger("Ryan");
+        Passenger Ange= new Passenger("Ange");
+        Passenger Alex= new Passenger("Alex");
+        myCar.addPassenger(Sarah);
+        myCar.addPassenger(Ryan);
+        myCar.addPassenger(Ange);
+        myCar.addPassenger(Alex);
+        myCar.printmanifest();
+        myCar.removePassenger(Alex);
+        myCar.printmanifest();
+        }
 }
